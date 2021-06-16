@@ -1,0 +1,1638 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.doughnut.com/ontologies/doughnut.owl#"
+     xml:base="http://www.doughnut.com/ontologies/doughnut.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.doughnut.com/ontologies/doughnut.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#hasBase -->
+
+    <owl:ObjectProperty rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#hasBase">
+        <rdfs:subPropertyOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasIngredient"/>
+        <owl:inverseOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#isBaseOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Doughnut"/>
+        <rdfs:range rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutBase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#hasFrosting -->
+
+    <owl:ObjectProperty rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#hasFrosting">
+        <rdfs:subPropertyOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasIngredient"/>
+        <owl:inverseOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#isFrostingOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Doughnut"/>
+        <rdfs:range rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutFrosting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#hasIngredient">
+        <owl:inverseOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#isIngredientOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#hasSweetness -->
+
+    <owl:ObjectProperty rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#hasSweetness">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutTopping"/>
+        <rdfs:range rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SweetnessValuePartition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#hasTopping -->
+
+    <owl:ObjectProperty rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping">
+        <rdfs:subPropertyOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasIngredient"/>
+        <owl:inverseOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#isToppingOf"/>
+        <rdfs:domain rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Doughnut"/>
+        <rdfs:range rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutTopping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#isBaseOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#isBaseOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#isIngredientOf"/>
+        <rdfs:domain rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutBase"/>
+        <rdfs:range rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Doughnut"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#isFrostingOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#isFrostingOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#isIngredientOf"/>
+        <rdfs:domain rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutFrosting"/>
+        <rdfs:range rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Doughnut"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#isIngredientOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#isIngredientOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#isToppingOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#isToppingOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#isIngredientOf"/>
+        <rdfs:domain rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutTopping"/>
+        <rdfs:range rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Doughnut"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#hasSugarContentValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#hasSugarContentValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#BlackForestDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#BlackForestDoughnut">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#PremierDoughnut"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CherryTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateChipTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateSprinkleTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#CherryTopping"/>
+                            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateChipTopping"/>
+                            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateSprinkleTopping"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasBase"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CakeBatterDough"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasFrosting"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CreamFrosting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#CakeBatterDough -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#CakeBatterDough">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutBase"/>
+        <owl:disjointWith rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#CaramelDelightDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#CaramelDelightDoughnut">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#PremierDoughnut"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#HoneyDrizzleTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#RaisinTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ToastedCoconutTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#HoneyDrizzleTopping"/>
+                            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#RaisinTopping"/>
+                            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ToastedCoconutTopping"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasBase"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasFrosting"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#VanillaFrosting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#CherryTopping -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#CherryTopping">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#FruitTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Divine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ChocoholicDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocoholicDoughnut">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#PremierDoughnut"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateChipTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateSprinkleTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateChipTopping"/>
+                            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateSprinkleTopping"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasBase"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasFrosting"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateFrosting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ChocolateChipTopping -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateChipTopping">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Divine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ChocolateDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateDoughnut">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#Doughnut"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasFrosting"/>
+                                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateFrosting"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateTopping"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#NonChocolateDoughnut"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ChocolateDrizzleTopping -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateDrizzleTopping">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Delight"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ChocolateFrosting -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateFrosting">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutFrosting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ChocolateSprinkleTopping -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateSprinkleTopping">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Divine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ChocolateSurpriseDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateSurpriseDoughnut">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#PremierDoughnut"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateDrizzleTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:allValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateDrizzleTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasBase"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CakeBatterDough"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasFrosting"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateFrosting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ChocolateTopping -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateTopping">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ChoconutDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChoconutDoughnut">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#PremierDoughnut"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#HazelnutTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#PeanutTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#WalnutTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#HazelnutTopping"/>
+                            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#PeanutTopping"/>
+                            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#WalnutTopping"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasBase"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasFrosting"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateFrosting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#CoffeeFrosting -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#CoffeeFrosting">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutFrosting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#CookieCrumbleTopping -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#CookieCrumbleTopping">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SugarTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Sweet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#CreamFrosting -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#CreamFrosting">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutFrosting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#Delight -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#Delight">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SweetnessValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#Divine -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#Divine">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SweetnessValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#Doughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#Doughnut">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasBase"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutBase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasFrosting"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutFrosting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasSugarContentValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#DoughnutBase -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutBase"/>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#DoughnutFrosting -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutFrosting"/>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#DoughnutTopping -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutTopping"/>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#FruitDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#FruitDoughnut">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#Doughnut"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                        <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#FruitTopping"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#FruitTopping -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#FruitTopping">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#HazelnutTopping -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#HazelnutTopping">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#NutsTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Sweet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#HighSugarDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#HighSugarDoughnut">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#Doughnut"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasSugarContentValue"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#HoneyDrizzleTopping -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#HoneyDrizzleTopping">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SugarTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Divine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#HotPinkLoveDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#HotPinkLoveDoughnut">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#PremierDoughnut"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SugarSprinkleTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:allValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SugarSprinkleTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasBase"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasFrosting"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#StrawberryFrosting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#InterestingDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#InterestingDoughnut">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#Doughnut"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutTopping"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#KrispyCookieDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#KrispyCookieDoughnut">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#PremierDoughnut"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CookieCrumbleTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#PeanutTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#CookieCrumbleTopping"/>
+                            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#PeanutTopping"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasBase"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasFrosting"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#VanillaFrosting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#LowSugarDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#LowSugarDoughnut">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#Doughnut"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasSugarContentValue"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#MarshmellowDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#MarshmellowDoughnut">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#PremierDoughnut"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#MarshmellowTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SugarSprinkleTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#MarshmellowTopping"/>
+                            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#SugarSprinkleTopping"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasBase"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasFrosting"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CreamFrosting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#MarshmellowTopping -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#MarshmellowTopping">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SugarTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Sweet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#MochaKremeDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#MochaKremeDoughnut">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#PremierDoughnut"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SugarSprinkleTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:allValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SugarSprinkleTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasBase"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CakeBatterDough"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasFrosting"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CoffeeFrosting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#NonChocolateDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#NonChocolateDoughnut">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#Doughnut"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateDoughnut"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#NutsTopping -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#NutsTopping">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#PeanutTopping -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#PeanutTopping">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#NutsTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Sweet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#PremierDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#PremierDoughnut">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Doughnut"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#RaisinTopping -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#RaisinTopping">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#FruitTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Divine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#StrawberryCakeDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#StrawberryCakeDoughnut">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#PremierDoughnut"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#StrawberryTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:allValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#StrawberryTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasBase"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CakeBatterDough"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasFrosting"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#StrawberryFrosting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#StrawberryFrosting -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#StrawberryFrosting">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutFrosting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#StrawberryTopping -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#StrawberryTopping">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#FruitTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Divine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#SugarDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#SugarDoughnut">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#Doughnut"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasFrosting"/>
+                                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CreamFrosting"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SugarTopping"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#SugarSprinkleTopping -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#SugarSprinkleTopping">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SugarTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Delight"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#SugarTopping -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#SugarTopping">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#Sweet -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#Sweet">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SweetnessValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#SweetnessValuePartition -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#SweetnessValuePartition">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#Delight"/>
+                    <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#Divine"/>
+                    <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#Sweet"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#TastyDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#TastyDoughnut">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#Doughnut"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutTopping"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasSweetness"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Divine"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ToastedCoconutTopping -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ToastedCoconutTopping">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SugarTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Divine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ValuePartition -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ValuePartition"/>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#VanillaFrosting -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#VanillaFrosting">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutFrosting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#WalnutTopping -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#WalnutTopping">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#NutsTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasSweetness"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#Sweet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ZebraDoughnut -->
+
+    <owl:Class rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ZebraDoughnut">
+        <rdfs:subClassOf rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#PremierDoughnut"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateDrizzleTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasTopping"/>
+                <owl:allValuesFrom rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateDrizzleTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasBase"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#hasFrosting"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CreamFrosting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#BlackForestDoughnut -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#BlackForestDoughnut">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#BlackForestDoughnut"/>
+        <hasBase rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CakeBatterDough"/>
+        <hasFrosting rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CreamFrosting"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CherryTopping"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateChipTopping"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateSprinkleTopping"/>
+        <hasSugarContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">402</hasSugarContentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#CakeBatterDough -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#CakeBatterDough">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CakeBatterDough"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#CaramelDelightDoughnut -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#CaramelDelightDoughnut">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CaramelDelightDoughnut"/>
+        <hasBase rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough"/>
+        <hasFrosting rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#VanillaFrosting"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#HoneyDrizzleTopping"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#RaisinTopping"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ToastedCoconutTopping"/>
+        <hasSugarContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">416</hasSugarContentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#CherryTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#CherryTopping">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CherryTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ChocoholicDoughnut -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocoholicDoughnut">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocoholicDoughnut"/>
+        <hasBase rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough"/>
+        <hasFrosting rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateFrosting"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateChipTopping"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateSprinkleTopping"/>
+        <hasSugarContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">312</hasSugarContentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ChocolateChipTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateChipTopping">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateChipTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ChocolateDrizzleTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateDrizzleTopping">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateDrizzleTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ChocolateFrosting -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateFrosting">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateFrosting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ChocolateSprinkleTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateSprinkleTopping">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateSprinkleTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ChocolateSurpriseDoughnut -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateSurpriseDoughnut">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateSurpriseDoughnut"/>
+        <hasBase rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CakeBatterDough"/>
+        <hasFrosting rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateFrosting"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateDrizzleTopping"/>
+        <hasSugarContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">412</hasSugarContentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ChocolateTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateTopping">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ChoconutDoughnut -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChoconutDoughnut">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChoconutDoughnut"/>
+        <hasBase rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough"/>
+        <hasFrosting rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateFrosting"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#HazelnutTopping"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#PeanutTopping"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#WalnutTopping"/>
+        <hasSugarContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">152</hasSugarContentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#CoffeeFrosting -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#CoffeeFrosting">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CoffeeFrosting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#CookieCrumbleTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#CookieCrumbleTopping">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CookieCrumbleTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#CreamFrosting -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#CreamFrosting">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CreamFrosting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#FruitTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#FruitTopping">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#FruitTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#HazelnutTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#HazelnutTopping">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#HazelnutTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#HoneyDrizzleTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#HoneyDrizzleTopping">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#HoneyDrizzleTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#HotPinkLoveDoughnut -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#HotPinkLoveDoughnut">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#HotPinkLoveDoughnut"/>
+        <hasBase rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough"/>
+        <hasFrosting rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#StrawberryFrosting"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SugarSprinkleTopping"/>
+        <hasSugarContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">366</hasSugarContentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#KrispyCookieDoughnut -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#KrispyCookieDoughnut">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#KrispyCookieDoughnut"/>
+        <hasBase rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough"/>
+        <hasFrosting rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#VanillaFrosting"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CookieCrumbleTopping"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#PeanutTopping"/>
+        <hasSugarContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">196</hasSugarContentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#MarshmellowDoughnut -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#MarshmellowDoughnut">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#MarshmellowDoughnut"/>
+        <hasBase rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough"/>
+        <hasFrosting rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CreamFrosting"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#MarshmellowTopping"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SugarSprinkleTopping"/>
+        <hasSugarContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">349</hasSugarContentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#MarshmellowTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#MarshmellowTopping">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#MarshmellowTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#MochaKremeDoughnut -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#MochaKremeDoughnut">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#MochaKremeDoughnut"/>
+        <hasBase rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CakeBatterDough"/>
+        <hasFrosting rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CoffeeFrosting"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SugarSprinkleTopping"/>
+        <hasSugarContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">245</hasSugarContentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#NutsTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#NutsTopping">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#NutsTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#PeanutTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#PeanutTopping">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#PeanutTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#RaisinTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#RaisinTopping">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#RaisinTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#StrawberryCakeDoughnut -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#StrawberryCakeDoughnut">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#StrawberryCakeDoughnut"/>
+        <hasBase rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CakeBatterDough"/>
+        <hasFrosting rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#StrawberryFrosting"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#StrawberryTopping"/>
+        <hasSugarContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">423</hasSugarContentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#StrawberryFrosting -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#StrawberryFrosting">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#StrawberryFrosting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#StrawberryTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#StrawberryTopping">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#StrawberryTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#SugarSprinkleTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#SugarSprinkleTopping">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SugarSprinkleTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#SugarTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#SugarTopping">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#SugarTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ToastedCoconutTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ToastedCoconutTopping">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ToastedCoconutTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#VanillaFrosting -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#VanillaFrosting">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#VanillaFrosting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#WalnutTopping -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#WalnutTopping">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#WalnutTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.doughnut.com/ontologies/doughnut.owl#ZebraDoughnut -->
+
+    <owl:NamedIndividual rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ZebraDoughnut">
+        <rdf:type rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ZebraDoughnut"/>
+        <hasBase rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#YeastRaisedDough"/>
+        <hasFrosting rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#CreamFrosting"/>
+        <hasTopping rdf:resource="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateDrizzleTopping"/>
+        <hasSugarContentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">370</hasSugarContentValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#BlackForestDoughnut"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#CaramelDelightDoughnut"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocoholicDoughnut"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateSurpriseDoughnut"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChoconutDoughnut"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#HotPinkLoveDoughnut"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#KrispyCookieDoughnut"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#MarshmellowDoughnut"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#MochaKremeDoughnut"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#StrawberryCakeDoughnut"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ZebraDoughnut"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#CherryTopping"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#RaisinTopping"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#StrawberryTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateChipTopping"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateDrizzleTopping"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateSprinkleTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ChocolateTopping"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#FruitTopping"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#NutsTopping"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#SugarTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#CookieCrumbleTopping"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#HoneyDrizzleTopping"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#MarshmellowTopping"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#SugarSprinkleTopping"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ToastedCoconutTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#Delight"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#Divine"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#Sweet"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#Doughnut"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutBase"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutFrosting"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#DoughnutTopping"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#ValuePartition"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#HazelnutTopping"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#PeanutTopping"/>
+            <rdf:Description rdf:about="http://www.doughnut.com/ontologies/doughnut.owl#WalnutTopping"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
